@@ -67,3 +67,13 @@ for (var l = 0; l < lastentries.length; l++) {
     formOutput.textContent = lastentries[l].text;
     $(lastentries[l].ID).append(formOutput);
 }
+
+//animate
+var animate = $('time-block');
+animate.on("mouseover", function () {
+    $(this).animate({
+        outlineWidth: bold
+    }, 500, function () {
+        $(this).remove();
+    });
+});
