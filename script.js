@@ -72,7 +72,8 @@ for (var l = 0; l < lastentries.length; l++) {
 var animate = $('time-block');
 animate.on("mouseover", function () {
     $(this).animate({
-        outlineWidth: bold
+        outlineWidth: bold;
+        outline-color: blue;
     }, 500, function () {
         $(this).remove();
     });
