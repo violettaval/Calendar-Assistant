@@ -41,11 +41,16 @@ hourFill();
 var saving = $('.saveBtn');
 saving.on('click', function (event) {
     event.preventDefault();
-    var IDify = this.id.trim("b");
-    var formInput = $("#" + IDify);
+
+    var IDify = this.id;
+    IDify = IDify.substring(0, IDify.length - 1);
+    console.log(IDify);
+    var formInput = $("#" + IDify).textContent;
+    formInput= toString(formInput);
+    console.log(formInput);
     var data = {
         ID: IDify,
-        text: formInput.textContent.trim()
+        text: formInput
     };
     console.log(data);
     localStorage.setItem("data", JSON.stringify(data));
